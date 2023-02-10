@@ -1,13 +1,15 @@
 import { ThemeProvider } from "styled-components";
 import { defaultTheme } from "./styles/themes/default";
+import { BrowserRouter } from "react-router-dom";
 import { GlobalStyle } from "./styles/global";
+import { Router } from "./Router";
 
 export function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
-      <h1>ola</h1>
-      <button type="button">enviar</button>
-
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
       <GlobalStyle />
     </ThemeProvider>
   );
