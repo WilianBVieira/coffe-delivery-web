@@ -16,6 +16,13 @@ export const GlobalStyle = createGlobalStyle`
     color: ${(props) => props.theme["base-text"]}
   }
 
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+  }
+
   body, input, textarea, button {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;

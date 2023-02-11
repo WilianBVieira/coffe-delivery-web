@@ -17,10 +17,16 @@ export const HeaderContainer = styled.div`
     gap: 0.75rem;
   }
 
-  /* button {
-    
+  button {
+    line-height: 1.3rem;
+    gap: 0.4rem;
+
     color: ${(props) => props.theme["purple-700"]};
     background: ${(props) => props.theme["purple-100"]};
     cursor: pointer;
-  } */
+  }
+
+  a button {
+    background: ${(props) => props.theme["yellow-100"]};
+  }
 `;
