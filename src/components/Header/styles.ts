@@ -8,12 +8,12 @@ export const HeaderContainer = styled.div`
   width: 100%;
 
   img {
-    padding-left: 10rem;
+    padding-left: 11.11%;
   }
 
   div {
     display: flex;
-    padding-right: 10rem;
+    padding-right: 11.11%;
     gap: 0.75rem;
   }
 
