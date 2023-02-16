@@ -8,7 +8,7 @@ export const IntroductionContainer = styled.section`
 
   article {
     display: grid;
-    width: 1120px;
+    width: 70rem;
     grid-template-columns: 804fr 636fr;
     grid-template-rows: 1fr 1fr;
 
@@ -16,7 +16,7 @@ export const IntroductionContainer = styled.section`
       grid-column: 1/2;
       grid-row: 1/2;
 
-      width: 44.72%;
+      width: 40.25rem;
       height: 21.5rem;
       flex-direction: column;
       display: flex;
@@ -43,6 +43,7 @@ export const IntroductionContainer = styled.section`
 
         line-height: 1.3;
         font-size: 20px;
+        font-weight: 400;
       }
     }
 
