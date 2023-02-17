@@ -86,27 +86,45 @@ export const CoffeCard = styled.div`
     display: flex;
     flex-direction: row;
     width: 13rem;
-    justify-content: space-around;
+    height: 2.375rem;
+    justify-content: space-between;
 
-    padding-top: 2.1875rem;
+    margin-top: 2.1875rem;
 
-    .dollarSign {
-      padding-top: 0.75rem;
-      font-size: 14px;
-      font-weight: 400;
+    .price {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      width: 4.1875rem;
+
+      .dollarSign {
+        padding-top: 0.75rem;
+        font-size: 14px;
+        font-weight: 400;
+      }
+
+      .productValue {
+        font-size: 24px;
+        font-weight: 800;
+      }
     }
 
-    .productValue {
-      font-size: 24px;
-      font-weight: 800;
-    }
+    .quantityAndCart {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
 
-    input {
-      width: 4.5rem;
-    }
+      width: 7.375rem;
 
-    button {
-      background: ${(props) => props.theme["purple-700"]};
+      input {
+        width: 4.5rem;
+      }
+
+      button {
+        background: ${(props) => props.theme["purple-700"]};
+        width: 2.375rem;
+      }
     }
   }
 `;

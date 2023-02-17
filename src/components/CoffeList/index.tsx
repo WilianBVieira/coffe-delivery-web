@@ -17,12 +17,21 @@ export function CoffeList() {
             O tradicional café feito com água quente e grãos moídos
           </h3>
           <div className="buyArea">
-            <h3 className="dollarSign">R$</h3>
-            <h2 className="productValue">9,90</h2>
-            <input type="number" placeholder="1"></input>
-            <button>
-              <ShoppingCartSimple size={16} color="#da1616" weight="fill" />
-            </button>
+            <div className="price">
+              <h3 className="dollarSign">R$</h3>
+              <h2 className="productValue">9,90</h2>
+            </div>
+            <div className="quantityAndCart">
+              <input
+                type="number"
+                id="quantityOfProducts"
+                placeholder="1"
+                min={1}
+              ></input>
+              <button>
+                <ShoppingCartSimple size={16} color="white" weight="fill" />
+              </button>
+            </div>
           </div>
         </CoffeCard>
       </div>
