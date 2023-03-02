@@ -9,16 +9,8 @@ export const CoffeListContainer = styled.div`
   }
 
   .CardListContainer {
-    width: 70rem;
-    padding-bottom: 2rem;
-
-    .ourCafes {
-      font-weight: 800;
-      line-height: 1.3;
-      font-size: 2rem;
-      color: ${(props) => props.theme["base-subtitle"]};
-      padding-bottom: 3.375rem;
-    }
+    width: inherit;
+    padding-bottom: 0.5rem;
   }
 `;
 
@@ -74,7 +66,7 @@ export const CoffeCard = styled.div`
     display: flex;
     justify-content: center;
     padding-top: 0.8175rem;
-    width: 13.4rem;
+    width: 13.5rem;
 
     font-size: 14px;
     font-weight: 400;
@@ -113,15 +105,45 @@ export const CoffeCard = styled.div`
     .quantityAndCart {
       display: flex;
       flex-direction: row;
+      width: 7.375rem;
       justify-content: space-between;
 
-      width: 7.375rem;
-
-      input {
+      .inputStepper {
         width: 4.5rem;
+        display: flex;
+
+        input {
+          width: 1.5rem;
+          border-radius: 0;
+          text-align: center;
+
+          background: ${(props) => props.theme["base-button"]};
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+        }
+
+        button {
+          width: 1.5rem;
+          color: ${(props) => props.theme["purple-300"]};
+          background: ${(props) => props.theme["base-button"]};
+
+          cursor: pointer;
+        }
+
+        #decrement {
+          border-radius: 8px 0 0 8px;
+          font-weight: 600;
+        }
+
+        #increment {
+          border-radius: 0 8px 8px 0;
+        }
       }
 
-      button {
+      .addToCart {
         background: ${(props) => props.theme["purple-700"]};
         width: 2.375rem;
       }

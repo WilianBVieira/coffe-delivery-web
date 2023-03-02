@@ -1,34 +1,43 @@
 import { CoffeCard, CoffeListContainer } from "./styles";
-import CoffeImage from "../../assets/CoffeImageCard.svg";
 import { ShoppingCartSimple } from "phosphor-react";
 
-export function CoffeList() {
+interface CoffeListProps {
+  image: string;
+  tags: string;
+  name: string;
+  description: string;
+}
+
+export function CoffeList({ image, tags, name, description }: CoffeListProps) {
   return (
     <CoffeListContainer>
       <div className="CardListContainer">
-        <h2 className="ourCafes">Nossos cafés</h2>
         <CoffeCard>
-          <img src={CoffeImage} />
+          <img src={image} />
           <div className="coffeTag">
-            <label>TRADICIONAL</label>
+            <label>{tags}</label>
           </div>
-          <h2 className="productName">Expresso Tradicional</h2>
-          <h3 className="nameSubtitle">
-            O tradicional café feito com água quente e grãos moídos
-          </h3>
+          <h2 className="productName">{name}</h2>
+          <h3 className="nameSubtitle">{description}</h3>
           <div className="buyArea">
             <div className="price">
               <h3 className="dollarSign">R$</h3>
               <h2 className="productValue">9,90</h2>
             </div>
             <div className="quantityAndCart">
-              <input
-                type="number"
-                id="quantityOfProducts"
-                placeholder="1"
-                min={1}
-              ></input>
-              <button>
+              <div className="inputStepper">
+                <button id="decrement"> - </button>
+                <input
+                  type="number"
+                  id="quantityOfProducts"
+                  placeholder="1"
+                  min={1}
+                  max={100}
+                  readOnly
+                />
+                <button id="increment"> + </button>
+              </div>
+              <button className="addToCart">
                 <ShoppingCartSimple size={16} color="white" weight="fill" />
               </button>
             </div>

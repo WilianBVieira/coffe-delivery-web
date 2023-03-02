@@ -1,14 +1,22 @@
 import styled, { css } from "styled-components";
 
+export const HomeContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
 export const IntroductionContainer = styled.section`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   height: 34rem;
 
   article {
     display: grid;
     width: 70rem;
+    height: inherit;
     grid-template-columns: 804fr 636fr;
     grid-template-rows: 1fr 1fr;
 
@@ -104,4 +112,24 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
       background-color: ${buttonVariants[props.variant]};
     `;
   }}
+`;
+
+export const ListContainer = styled.div`
+  width: 70rem;
+  padding-bottom: 9.8rem;
+
+  .ourCafes {
+    font-weight: 800;
+    line-height: 1.3;
+    font-size: 2rem;
+    color: ${(props) => props.theme["base-subtitle"]};
+    padding-bottom: 3.7rem;
+  }
+
+  .coffeListGrid {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
 `;
